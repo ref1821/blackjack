@@ -12,3 +12,18 @@ class game:
         c=a+b
         print("total=")
         print(c)
+        if c < 21:
+            print("another?"  "yas/no")
+            d = input()
+            if d == "yes":
+                ran1 = randint(1,13)
+                print(ran1)
+                print(c+ran1)
+            elif d == "no":
+                print("your number still" + c)
+            else:
+                print("no out put")
+        elif c == 21:
+            print("you win")
+        elif c > 21:
+            print("you lose")
