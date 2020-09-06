@@ -24,6 +24,7 @@ class game :
             elif d == "no":
                 print("your number still =")
                 print(c)
+                break
             else:
                 print("no out put")
         if c == 21:
