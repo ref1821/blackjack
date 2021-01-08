@@ -33,15 +33,3 @@ class game :
         elif c > 21:
             print("you lose")
 
-class no_j:
-    def _init_(self):
-        self = "yyyy"
-        print(self)
-
-    def two(s):
-        s = "zzz"
-        print(s)
-
-    def three(y):
-        y = "iii"
-        print(y)
