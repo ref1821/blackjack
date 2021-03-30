@@ -12,8 +12,6 @@ def exit():
     root.destroy()
 
 
-first = randint(1,13)
-second = randint(1, 13)
 
 
 def but1():
@@ -24,18 +22,20 @@ def but1():
     root2.config(bg = "black")
     root2.geometry("500x600")
 
-    def another_card():
+    first = randint(1, 13)
+    second = randint(1, 13)
+    global final
+    final = first + second
 
-        final = first + second
-        third = randint(1, 13)
-        while final <= 21:
-            if final <= 21:
-                final = final + third
-                final_Label = Label(root2, text = "my new number is" + str(final))
-                final_Label.grid()
-            else:
-                end_label = Label(root2, text = "you lost")
-                end_label.grid()
+
+    def another_card():
+        new = randint(1, 13)
+        final = new + final
+        printl = Label(root2, text = "your number is" + str(final), fg = "white")
+        printl.grid()
+    def no_another():
+        no_label = Label(root2, text = "your final number is" + str(final), fg = "white")
+        no_label.grid()
 
 
 
@@ -46,7 +46,7 @@ def but1():
 
     new_card = Button(frame, text="NEW CARD", command=another_card, bg="green", padx = 50)
     new_card.grid()
-    stop_card = Button(frame2, text = "I don't want other" ,command =but1, bg = "red", padx = 50)
+    stop_card = Button(frame2, text = "I don't want other" ,command =no_another(), bg = "red", padx = 50)
     stop_card.grid()
 
     my_number = Label(root2, text = "my number is " + str(first) + " and " + str(second), fg = "green", bg =  "black")
